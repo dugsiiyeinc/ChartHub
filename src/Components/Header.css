@@ -1,0 +1,360 @@
+/* ========== Header ========== */
+.header {
+  width: 100%;
+  background-color: #101742;
+  padding: 0 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+/* ========== Logo ========== */
+.header-logo img {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.header-logo img:hover {
+  transform: scale(1.05);
+}
+
+/* ========== Menu Wrapper ========== */
+.header-menu {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* ========== Navigation ========== */
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  flex: 1;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding: 8px 4px;
+  position: relative;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #e7ab37;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #e7ab37;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: #e7ab37;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* ========== Buttons ========== */
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-signin {
+  background: transparent;
+  color: #ffffff;
+  border: 1.5px solid #e7ab37;
+  padding: 8px 22px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn-signin:hover {
+  background-color: rgba(231, 171, 55, 0.15);
+  color: #e7ab37;
+}
+
+.btn-signup {
+  background-color: #e7ab37;
+  color: #101742;
+  border: none;
+  padding: 8px 22px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn-signup:hover {
+  background-color: #f0ba4e;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(231, 171, 55, 0.35);
+}
+
+/* ========== User Pill (Logged In) ========== */
+.header-user {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.user-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(231, 171, 55, 0.1);
+  border: 1px solid rgba(231, 171, 55, 0.25);
+  border-radius: 50px;
+  padding: 6px 16px 6px 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.user-pill:hover {
+  background: rgba(231, 171, 55, 0.18);
+}
+
+.user-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e7ab37 0%, #d49a2a 100%);
+  color: #101742;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.header-avatar-img {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-name {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* ========== Dropdown Menu ========== */
+.user-dropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  background: #141b3d;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 8px;
+  min-width: 200px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+  animation: dropdownFade 0.2s ease;
+}
+
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 8px;
+  border: none;
+  background: none;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+}
+
+.dropdown-item svg {
+  font-size: 20px;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 6px 0;
+}
+
+.dropdown-item.logout {
+  color: #e74c4c;
+}
+
+.dropdown-item.logout:hover {
+  background: rgba(231, 76, 76, 0.1);
+  color: #ff6b6b;
+}
+
+/* ========== Hamburger Toggle ========== */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #e7ab37;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 4px;
+  transition: transform 0.3s ease;
+}
+
+.menu-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* ========== Mobile Responsive ========== */
+@media (max-width: 768px) {
+  .header {
+    padding: 0 20px;
+  }
+
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #101742;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 40px 30px;
+    gap: 32px;
+    transform: translateX(100%);
+    transition: transform 0.35s ease;
+    z-index: 999;
+  }
+
+  .header-menu.open {
+    transform: translateX(0);
+  }
+
+  .header-nav {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .nav-link {
+    font-size: 18px;
+    padding: 14px 16px;
+    border-radius: 10px;
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+
+  .nav-link:hover {
+    background-color: rgba(231, 171, 55, 0.1);
+  }
+
+  .nav-link.active {
+    background-color: rgba(231, 171, 55, 0.12);
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  .header-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .btn-signin,
+  .btn-signup {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+
+  .header-user {
+    width: 100%;
+  }
+
+  .user-pill {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 16px 10px 10px;
+  }
+
+  .user-dropdown {
+    position: static;
+    width: 100%;
+    margin-top: 12px;
+    box-shadow: none;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+}
