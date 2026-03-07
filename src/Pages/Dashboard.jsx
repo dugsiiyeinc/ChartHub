@@ -22,12 +22,12 @@ const Dashboard = () => {
             const fileName = `${user.id}/${Date.now()}_${Math.random().toString(36).substring(7)}.${fileExt}`
 
             const { error: uploadError } = await supabase.storage
-                .from('Charts Images')
+                .from('Chart')
                 .upload(fileName, img.file)
 
             if (!uploadError) {
                 const { data: { publicUrl } } = supabase.storage
-                    .from('Charts Images')
+                    .from('Chart')
                     .getPublicUrl(fileName)
                 imageUrls.push(publicUrl)
             }
