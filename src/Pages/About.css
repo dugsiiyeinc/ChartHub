@@ -762,17 +762,28 @@
         font-size: 38px;
     }
 
+    .about-hero-content {
+        padding: 0 20px;
+    }
+
     .mission-container {
         grid-template-columns: 1fr;
         gap: 40px;
+        padding: 0 20px;
     }
 
     .values-grid {
         grid-template-columns: repeat(2, 1fr);
+        padding: 0 20px;
     }
 
     .team-grid {
         grid-template-columns: repeat(2, 1fr);
+        padding: 0 20px;
+    }
+
+    .timeline {
+        padding: 0 20px;
     }
 
     .timeline::before {
@@ -800,31 +811,53 @@
 
 @media (max-width: 650px) {
     .about-hero {
-        padding: 70px 20px 50px;
+        padding: 70px 10px 40px;
+    }
+
+    .about-hero-content {
+        padding: 0 12px;
     }
 
     .about-hero-title {
-        font-size: 30px;
+        font-size: 28px;
     }
 
     .about-hero-desc {
-        font-size: 15px;
+        font-size: 14px;
+    }
+
+    .about-mission {
+        padding: 60px 10px;
+    }
+
+    .mission-container {
+        padding: 0 4px;
+    }
+
+    .about-values {
+        padding: 60px 10px;
     }
 
     .values-grid {
         grid-template-columns: 1fr;
+        padding: 0 4px;
+    }
+
+    .about-team {
+        padding: 60px 10px;
     }
 
     .team-grid {
         grid-template-columns: 1fr;
+        padding: 0 4px;
     }
 
     .about-section-heading {
-        font-size: 28px;
+        font-size: 26px;
     }
 
     .mission-heading {
-        font-size: 28px;
+        font-size: 26px;
     }
 
     .mission-visual {
@@ -836,12 +869,24 @@
         margin-top: 0;
     }
 
+    .about-story {
+        padding: 60px 10px;
+    }
+
+    .timeline {
+        padding: 0 4px;
+    }
+
+    .about-cta {
+        padding: 60px 10px;
+    }
+
     .about-cta-container {
-        padding: 40px 24px;
+        padding: 36px 16px;
     }
 
     .about-cta-title {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     .timeline-item {

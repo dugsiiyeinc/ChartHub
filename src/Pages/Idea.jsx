@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { supabase } from '../supabaseClient'
 import { useAuth } from '../Context/AuthContext'
 import NewIdeaModal from '../Components/NewIdeaModal'
@@ -32,6 +33,17 @@ const Idea = () => {
     const [filterPair, setFilterPair] = useState('All Pairs')
     const [sortBy, setSortBy] = useState('newest')
     const [showModal, setShowModal] = useState(false)
+
+    // Generate URL slug from title
+    const generateSlug = (title) => {
+        if (!title) return ''
+        return title
+            .toLowerCase()
+            .replace(/[^a-z0-9\s-]/g, '')
+            .replace(/\s+/g, '-')
+            .replace(/-+/g, '-')
+            .trim()
+    }
 
     // Fetch all ideas from Supabase
     useEffect(() => {
@@ -246,7 +258,7 @@ const Idea = () => {
                 ) : filteredIdeas.length > 0 ? (
                     <div className="idea-grid">
                         {filteredIdeas.map((idea) => (
-                            <div key={idea.id} className="idea-card" id={`idea-${idea.id}`}>
+                            <Link key={idea.id} to={`/idea/${generateSlug(idea.title)}`} className="idea-card" id={`idea-${idea.id}`} style={{ textDecoration: 'none' }}>
                                 {/* Thumbnail */}
                                 <div className="idea-card-thumb">
                                     {idea.images && idea.images.length > 0 ? (
@@ -279,7 +291,7 @@ const Idea = () => {
                                         {formatDate(idea.created_at)}
                                     </span>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 ) : (
@@ -302,6 +314,8 @@ const Idea = () => {
                 onClose={() => setShowModal(false)}
                 onPublish={handlePublish}
             />
+
+
 
         </div>
     )

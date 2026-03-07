@@ -1,5 +1,5 @@
-import { useState, useRef } from 'react'
-import { HiX, HiPhotograph, HiLightBulb } from 'react-icons/hi'
+import { useState, useRef, useEffect } from 'react'
+import { HiX, HiPhotograph, HiLightBulb, HiPencil } from 'react-icons/hi'
 import './NewIdeaModal.css'
 
 const forexPairs = [
@@ -13,7 +13,7 @@ const forexPairs = [
     'XAU/USD'
 ]
 
-const NewIdeaModal = ({ isOpen, onClose, onPublish }) => {
+const NewIdeaModal = ({ isOpen, onClose, onPublish, editingIdea, onUpdate }) => {
     const [loading, setLoading] = useState(false)
     const [images, setImages] = useState([])
     const [formData, setFormData] = useState({
@@ -22,6 +22,23 @@ const NewIdeaModal = ({ isOpen, onClose, onPublish }) => {
         description: ''
     })
     const fileInputRef = useRef(null)
+
+    const isEditMode = !!editingIdea
+
+    // Pre-fill form when editing
+    useEffect(() => {
+        if (editingIdea) {
+            setFormData({
+                title: editingIdea.title || '',
+                currencyPair: editingIdea.currency_pair || '',
+                description: editingIdea.description || ''
+            })
+            setImages([])
+        } else {
+            setFormData({ title: '', currencyPair: '', description: '' })
+            setImages([])
+        }
+    }, [editingIdea, isOpen])
 
     if (!isOpen) return null
 
@@ -64,7 +81,9 @@ const NewIdeaModal = ({ isOpen, onClose, onPublish }) => {
 
         setLoading(true)
 
-        if (onPublish) {
+        if (isEditMode && onUpdate) {
+            await onUpdate(editingIdea.id, { ...formData, images })
+        } else if (onPublish) {
             await onPublish({ ...formData, images })
         }
 
@@ -88,7 +107,7 @@ const NewIdeaModal = ({ isOpen, onClose, onPublish }) => {
 
                 {/* Header */}
                 <div className="modal-header">
-                    <h2>Share Your Idea</h2>
+                    <h2>{isEditMode ? 'Edit Your Idea' : 'Share Your Idea'}</h2>
                     <button className="modal-close" onClick={onClose}><HiX /></button>
                 </div>
 
@@ -141,7 +160,19 @@ const NewIdeaModal = ({ isOpen, onClose, onPublish }) => {
                     <div className="modal-field">
                         <label>Charts / Images <span className="label-hint">(first image = thumbnail)</span></label>
 
-                        {/* Image Previews */}
+                        {/* Existing images when editing */}
+                        {isEditMode && editingIdea.images && editingIdea.images.length > 0 && images.length === 0 && (
+                            <div className="image-previews">
+                                {editingIdea.images.map((url, index) => (
+                                    <div key={index} className="image-preview-item">
+                                        <img src={url} alt={`Current ${index + 1}`} />
+                                        {index === 0 && <span className="thumbnail-badge">Current</span>}
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+
+                        {/* New image previews */}
                         {images.length > 0 && (
                             <div className="image-previews">
                                 {images.map((img, index) => (
@@ -160,7 +191,7 @@ const NewIdeaModal = ({ isOpen, onClose, onPublish }) => {
                         {images.length < 4 && (
                             <div className="image-upload-area" onClick={handleImageClick}>
                                 <HiPhotograph />
-                                <span>Click to upload images</span>
+                                <span>{isEditMode ? 'Upload new images (replaces current)' : 'Click to upload images'}</span>
                                 <input
                                     type="file"
                                     ref={fileInputRef}
@@ -175,7 +206,11 @@ const NewIdeaModal = ({ isOpen, onClose, onPublish }) => {
 
                     {/* Submit */}
                     <button type="submit" className="btn-publish" disabled={loading}>
-                        <HiLightBulb /> {loading ? 'Publishing...' : 'Publish Idea'}
+                        {isEditMode ? (
+                            <><HiPencil /> {loading ? 'Updating...' : 'Update Idea'}</>
+                        ) : (
+                            <><HiLightBulb /> {loading ? 'Publishing...' : 'Publish Idea'}</>
+                        )}
                     </button>
 
                 </form>

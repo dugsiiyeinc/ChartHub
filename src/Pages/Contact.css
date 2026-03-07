@@ -501,39 +501,66 @@
         font-size: 38px;
     }
 
+    .contact-hero-content {
+        padding: 0 20px;
+    }
+
     .contact-info-grid {
         grid-template-columns: 1fr;
+        padding: 0 20px;
     }
 
     .contact-form-container {
         grid-template-columns: 1fr;
         gap: 40px;
+        padding: 0 20px;
     }
 
     .faq-grid {
         grid-template-columns: 1fr;
+        padding: 0 20px;
     }
 }
 
 @media (max-width: 650px) {
     .contact-hero {
-        padding: 70px 20px 50px;
+        padding: 70px 10px 40px;
+    }
+
+    .contact-hero-content {
+        padding: 0 12px;
     }
 
     .contact-hero-title {
-        font-size: 30px;
+        font-size: 28px;
     }
 
     .contact-hero-desc {
-        font-size: 15px;
+        font-size: 14px;
+    }
+
+    .contact-info-section {
+        padding: 0 10px 40px;
+    }
+
+    .contact-info-grid {
+        padding: 0 4px;
+    }
+
+    .contact-form-section {
+        padding: 60px 10px;
+    }
+
+    .contact-form-container {
+        padding: 0 4px;
     }
 
     .contact-section-heading {
-        font-size: 28px;
+        font-size: 26px;
     }
 
     .contact-form-heading {
-        font-size: 28px;
+        font-size: 26px;
     }
 
     .form-row {
@@ -541,6 +568,14 @@
     }
 
     .contact-form {
-        padding: 24px;
+        padding: 20px 16px;
+    }
+
+    .contact-faq {
+        padding: 60px 10px;
+    }
+
+    .faq-grid {
+        padding: 0 4px;
     }
 }

@@ -409,9 +409,14 @@
 
 /* ========== Responsive ========== */
 @media (max-width: 600px) {
+    .profile-page {
+        padding: 30px 10px;
+    }
+
     .profile-header-card {
         flex-direction: column;
         text-align: center;
+        padding: 24px 16px;
     }
 
     .profile-avatar-section {
@@ -421,6 +426,10 @@
     .btn-edit-profile {
         width: 100%;
         justify-content: center;
+    }
+
+    .profile-details-card {
+        padding: 24px 16px;
     }
 
     .profile-field {

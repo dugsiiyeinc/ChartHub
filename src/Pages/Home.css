@@ -910,12 +910,31 @@
         font-size: 40px;
     }
 
+    .hero-content {
+        padding: 0 20px;
+    }
+
+    .hero-cards {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 20px;
+    }
+
+    .floating-card.card-3 {
+        display: none;
+    }
+
     .features-grid {
         grid-template-columns: repeat(2, 1fr);
+        padding: 0 20px;
+    }
+
+    .how-grid {
+        padding: 0 20px;
     }
 
     .testimonials-grid {
         grid-template-columns: repeat(2, 1fr);
+        padding: 0 20px;
     }
 
     .stats-container {
@@ -926,27 +945,23 @@
     .stat-item:nth-child(2)::after {
         display: none;
     }
-
-    .hero-cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .floating-card.card-3 {
-        display: none;
-    }
 }
 
 @media (max-width: 650px) {
     .hero-section {
-        padding: 70px 20px 60px;
+        padding: 70px 10px 50px;
+    }
+
+    .hero-content {
+        padding: 0 12px;
     }
 
     .hero-title {
-        font-size: 32px;
+        font-size: 30px;
     }
 
     .hero-subtitle {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .hero-buttons {
@@ -962,6 +977,7 @@
 
     .hero-cards {
         grid-template-columns: 1fr;
+        padding: 0 4px;
     }
 
     .floating-card.card-2,
@@ -969,13 +985,23 @@
         display: none;
     }
 
+    .features-section {
+        padding: 60px 10px;
+    }
+
     .features-grid {
         grid-template-columns: 1fr;
+        padding: 0 4px;
+    }
+
+    .how-section {
+        padding: 60px 10px;
     }
 
     .how-grid {
         grid-template-columns: 1fr;
         gap: 40px;
+        padding: 0 4px;
     }
 
     .how-grid::before {
@@ -983,17 +1009,26 @@
     }
 
     .section-heading {
-        font-size: 28px;
+        font-size: 26px;
+    }
+
+    .testimonials-section {
+        padding: 60px 10px;
     }
 
     .testimonials-grid {
         grid-template-columns: 1fr;
+        padding: 0 4px;
+    }
+
+    .stats-section {
+        padding: 40px 10px;
     }
 
     .stats-container {
         grid-template-columns: 1fr;
         gap: 28px;
-        padding: 36px 24px;
+        padding: 30px 16px;
     }
 
     .stat-item::after {
@@ -1004,12 +1039,16 @@
         display: none;
     }
 
+    .cta-section {
+        padding: 60px 10px;
+    }
+
     .cta-container {
-        padding: 40px 24px;
+        padding: 36px 16px;
     }
 
     .cta-title {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     .cta-buttons {
