@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useAuth } from '../Context/AuthContext'
+import { supabase } from '../supabaseClient'
 import { HiLightBulb, HiChat, HiPlus } from 'react-icons/hi'
 import NewIdeaModal from '../Components/NewIdeaModal'
 import './Dashboard.css'
@@ -13,8 +14,40 @@ const Dashboard = () => {
     }
 
     const handlePublish = async (ideaData) => {
-        console.log('Publishing idea:', ideaData)
-        // TODO: Save to Supabase
+        // Upload images to Supabase Storage
+        const imageUrls = []
+
+        for (const img of ideaData.images) {
+            const fileExt = img.file.name.split('.').pop()
+            const fileName = `${user.id}/${Date.now()}_${Math.random().toString(36).substring(7)}.${fileExt}`
+
+            const { error: uploadError } = await supabase.storage
+                .from('Charts Images')
+                .upload(fileName, img.file)
+
+            if (!uploadError) {
+                const { data: { publicUrl } } = supabase.storage
+                    .from('Charts Images')
+                    .getPublicUrl(fileName)
+                imageUrls.push(publicUrl)
+            }
+        }
+
+        // Insert idea into postIdea table
+        const { error } = await supabase
+            .from('postIdea')
+            .insert({
+                user_id: user.id,
+                title: ideaData.title,
+                currency_pair: ideaData.currencyPair,
+                description: ideaData.description,
+                images: imageUrls
+            })
+
+        if (error) {
+            console.error('Error publishing idea:', error.message)
+            alert('Failed to publish idea: ' + error.message)
+        }
     }
 
     return (
