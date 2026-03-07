@@ -1,11 +1,14 @@
 import { useState, useEffect } from 'react'
 import { supabase } from '../supabaseClient'
+import { useAuth } from '../Context/AuthContext'
+import NewIdeaModal from '../Components/NewIdeaModal'
 import {
     HiSearch,
     HiSparkles,
     HiLightBulb,
     HiChartBar,
-    HiPhotograph
+    HiPhotograph,
+    HiPlus
 } from 'react-icons/hi'
 import './Idea.css'
 
@@ -22,11 +25,13 @@ const forexPairs = [
 ]
 
 const Idea = () => {
+    const { user } = useAuth()
     const [ideas, setIdeas] = useState([])
     const [loading, setLoading] = useState(true)
     const [searchQuery, setSearchQuery] = useState('')
     const [filterPair, setFilterPair] = useState('All Pairs')
     const [sortBy, setSortBy] = useState('newest')
+    const [showModal, setShowModal] = useState(false)
 
     // Fetch all ideas from Supabase
     useEffect(() => {
@@ -82,6 +87,52 @@ const Idea = () => {
     }
 
     const filteredIdeas = getFilteredIdeas()
+
+    // Handle publishing new idea
+    const handlePublish = async (ideaData) => {
+        if (!user) {
+            alert('Please sign in to publish an idea')
+            return
+        }
+
+        // Upload images to Supabase Storage ("Chart" bucket)
+        const imageUrls = []
+
+        for (const img of ideaData.images) {
+            const fileExt = img.file.name.split('.').pop()
+            const fileName = `${user.id}/${Date.now()}_${Math.random().toString(36).substring(7)}.${fileExt}`
+
+            const { error: uploadError } = await supabase.storage
+                .from('Chart')
+                .upload(fileName, img.file)
+
+            if (!uploadError) {
+                const { data: { publicUrl } } = supabase.storage
+                    .from('Chart')
+                    .getPublicUrl(fileName)
+                imageUrls.push(publicUrl)
+            }
+        }
+
+        // Insert idea into postIdea table
+        const { error } = await supabase
+            .from('postIdea')
+            .insert({
+                user_id: user.id,
+                title: ideaData.title,
+                currency_pair: ideaData.currencyPair,
+                description: ideaData.description,
+                images: imageUrls
+            })
+
+        if (error) {
+            console.error('Error publishing idea:', error.message)
+            alert('Failed to publish idea: ' + error.message)
+        } else {
+            // Re-fetch ideas to show the new one
+            fetchIdeas()
+        }
+    }
 
     // Format date
     const formatDate = (dateStr) => {
@@ -168,6 +219,10 @@ const Idea = () => {
                         <div className="idea-count">
                             <span>{filteredIdeas.length}</span> {filteredIdeas.length === 1 ? 'idea' : 'ideas'}
                         </div>
+
+                        <button className="btn-new-idea-page" onClick={() => setShowModal(true)} id="btn-new-idea">
+                            <HiPlus /> New Idea
+                        </button>
                     </div>
                 </div>
             </section>
@@ -240,6 +295,13 @@ const Idea = () => {
                     </div>
                 )}
             </section>
+
+            {/* New Idea Modal */}
+            <NewIdeaModal
+                isOpen={showModal}
+                onClose={() => setShowModal(false)}
+                onPublish={handlePublish}
+            />
 
         </div>
     )

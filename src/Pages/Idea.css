@@ -197,6 +197,40 @@
     font-weight: 700;
 }
 
+/* ========== NEW IDEA BUTTON ========== */
+.btn-new-idea-page {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #e7ab37 0%, #f0c45e 100%);
+    color: #0d1235;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    box-shadow: 0 4px 15px rgba(231, 171, 55, 0.25);
+}
+
+.btn-new-idea-page:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(231, 171, 55, 0.35);
+    background: linear-gradient(135deg, #f0c45e 0%, #e7ab37 100%);
+}
+
+.btn-new-idea-page:active {
+    transform: translateY(0);
+}
+
+.btn-new-idea-page svg {
+    font-size: 18px;
+}
+
 /* ========== IDEAS GRID ========== */
 .idea-grid-section {
     padding: 30px 20px 80px;
@@ -436,17 +470,24 @@
         font-size: 38px;
     }
 
+    .idea-hero-content {
+        padding: 0 20px;
+    }
+
     .idea-grid {
         grid-template-columns: repeat(2, 1fr);
+        padding: 0 20px;
     }
 
     .idea-loading {
         grid-template-columns: repeat(2, 1fr);
+        padding: 60px 20px;
     }
 
     .idea-toolbar-inner {
         flex-direction: column;
         align-items: stretch;
+        padding: 0 20px;
     }
 
     .idea-search-box {
@@ -456,27 +497,55 @@
     .idea-filter-group {
         flex-wrap: wrap;
     }
+
+    .idea-empty {
+        padding: 80px 20px;
+    }
 }
 
 @media (max-width: 650px) {
     .idea-hero {
-        padding: 70px 20px 40px;
+        padding: 70px 10px 30px;
+    }
+
+    .idea-hero-content {
+        padding: 0 12px;
     }
 
     .idea-hero-title {
-        font-size: 30px;
+        font-size: 28px;
     }
 
     .idea-hero-desc {
-        font-size: 15px;
+        font-size: 14px;
+    }
+
+    .idea-toolbar {
+        padding: 15px 10px 0;
+    }
+
+    .idea-toolbar-inner {
+        padding: 0 4px;
+        gap: 12px;
+    }
+
+    .idea-grid-section {
+        padding: 20px 10px 60px;
     }
 
     .idea-grid {
         grid-template-columns: 1fr;
+        padding: 0 4px;
+        gap: 16px;
     }
 
     .idea-loading {
         grid-template-columns: 1fr;
+        padding: 40px 4px;
+    }
+
+    .idea-empty {
+        padding: 60px 12px;
     }
 
     .idea-filter-group {
@@ -485,5 +554,10 @@
 
     .idea-filter-select {
         width: 100%;
+    }
+
+    .btn-new-idea-page {
+        width: 100%;
+        justify-content: center;
     }
 }
