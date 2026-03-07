@@ -12,6 +12,7 @@ const Dashboard = () => {
     const [myIdeas, setMyIdeas] = useState([])
     const [loading, setLoading] = useState(true)
     const [editingIdea, setEditingIdea] = useState(null)
+    const [totalFaallooyinka, setTotalFaallooyinka] = useState(0)
 
     const getUserName = () => {
         return user?.user_metadata?.full_name || user?.email?.split('@')[0] || 'User'
@@ -48,6 +49,17 @@ const Dashboard = () => {
                 console.error('Error fetching ideas:', error.message)
             } else {
                 setMyIdeas(data || [])
+                // Fetch total faallooyinka for user's ideas
+                if (data && data.length > 0) {
+                    const ideaIds = data.map(idea => idea.id)
+                    const { count, error: faalloError } = await supabase
+                        .from('faalo')
+                        .select('*', { count: 'exact', head: true })
+                        .in('idea_id', ideaIds)
+                    if (!faalloError) {
+                        setTotalFaallooyinka(count || 0)
+                    }
+                }
             }
         } catch (err) {
             console.error('Unexpected error:', err)
@@ -210,7 +222,7 @@ const Dashboard = () => {
                     <div className="stat-card">
                         <div className="stat-info">
                             <span className="stat-label">Total Comments</span>
-                            <span className="stat-value">0</span>
+                            <span className="stat-value">{totalFaallooyinka}</span>
                         </div>
                         <div className="stat-icon comments-icon">
                             <HiChat />
