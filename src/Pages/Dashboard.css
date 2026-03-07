@@ -1,0 +1,176 @@
+/* ========== Dashboard Page ========== */
+.dashboard-page {
+    min-height: calc(100vh - 70px);
+    background: linear-gradient(135deg, #101742 0%, #1a2260 50%, #0d1235 100%);
+    padding: 40px 20px;
+}
+
+.dashboard-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+/* ========== Welcome Section ========== */
+.dashboard-welcome {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.welcome-text h1 {
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.welcome-name {
+    color: #e7ab37;
+}
+
+.welcome-text p {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 14px;
+}
+
+.btn-new-idea {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #e7ab37 0%, #d49a2a 100%);
+    color: #101742;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn-new-idea:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(231, 171, 55, 0.35);
+}
+
+/* ========== Stats Cards ========== */
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.stat-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.stat-label {
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.stat-value {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.stat-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.stat-icon.ideas-icon {
+    background: rgba(231, 171, 55, 0.15);
+    color: #e7ab37;
+}
+
+.stat-icon.comments-icon {
+    background: rgba(59, 130, 246, 0.15);
+    color: #3b82f6;
+}
+
+/* ========== Section ========== */
+.dashboard-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.section-title {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* ========== Empty State ========== */
+.ideas-empty {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.ideas-empty .empty-icon {
+    font-size: 40px;
+    color: rgba(231, 171, 55, 0.3);
+    margin-bottom: 8px;
+}
+
+.ideas-empty p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.ideas-empty span {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 13px;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 600px) {
+    .dashboard-welcome {
+        flex-direction: column;
+    }
+
+    .btn-new-idea {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome-text h1 {
+        font-size: 22px;
+    }
+}
