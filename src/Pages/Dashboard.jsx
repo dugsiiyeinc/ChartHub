@@ -1,12 +1,20 @@
+import { useState } from 'react'
 import { useAuth } from '../Context/AuthContext'
 import { HiLightBulb, HiChat, HiPlus } from 'react-icons/hi'
+import NewIdeaModal from '../Components/NewIdeaModal'
 import './Dashboard.css'
 
 const Dashboard = () => {
     const { user } = useAuth()
+    const [showModal, setShowModal] = useState(false)
 
     const getUserName = () => {
         return user?.user_metadata?.full_name || user?.email?.split('@')[0] || 'User'
+    }
+
+    const handlePublish = async (ideaData) => {
+        console.log('Publishing idea:', ideaData)
+        // TODO: Save to Supabase
     }
 
     return (
@@ -19,7 +27,7 @@ const Dashboard = () => {
                         <h1>Welcome back, <span className="welcome-name">{getUserName()}</span></h1>
                         <p>Manage your trading ideas and activity</p>
                     </div>
-                    <button className="btn-new-idea">
+                    <button className="btn-new-idea" onClick={() => setShowModal(true)}>
                         <HiPlus /> New Idea
                     </button>
                 </div>
@@ -59,6 +67,13 @@ const Dashboard = () => {
                 </div>
 
             </div>
+
+            {/* New Idea Modal */}
+            <NewIdeaModal
+                isOpen={showModal}
+                onClose={() => setShowModal(false)}
+                onPublish={handlePublish}
+            />
         </div>
     )
 }
