@@ -102,7 +102,7 @@ ChartHub/
 | **Vite 7** | Build tool and dev server |
 | **Supabase** | Backend — Database, Authentication, and Storage |
 | **React Icons** | Icon library (Heroicons set) |
-| **Vanilla CSS** | Custom styling with glassmorphism and animations |
+
 
 
 
