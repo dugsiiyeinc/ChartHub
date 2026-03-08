@@ -172,7 +172,7 @@ const Idea = () => {
     return (
         <div className="idea-page">
 
-            {/* ===== HERO ===== */}
+            {/*  HERO  */}
             <section className="idea-hero" id="idea-hero">
                 <div className="idea-hero-orb orb-a"></div>
                 <div className="idea-hero-orb orb-b"></div>
@@ -191,7 +191,7 @@ const Idea = () => {
                 </div>
             </section>
 
-            {/* ===== TOOLBAR / FILTERS ===== */}
+            {/*  TOOLBAR / FILTERS  */}
             <section className="idea-toolbar" id="idea-toolbar">
                 <div className="idea-toolbar-inner">
                     <div className="idea-search-box">
@@ -239,7 +239,7 @@ const Idea = () => {
                 </div>
             </section>
 
-            {/* ===== IDEAS GRID ===== */}
+            {/*  IDEAS GRID  */}
             <section className="idea-grid-section" id="idea-grid-section">
                 {loading ? (
                     // Loading skeleton

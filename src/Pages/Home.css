@@ -1,11 +1,11 @@
-/* ========== Home Page ========== */
+/*  Home Page  */
 .home-page {
     min-height: calc(100vh - 70px);
     background: linear-gradient(135deg, #101742 0%, #1a2260 50%, #0d1235 100%);
     overflow: hidden;
 }
 
-/* ========== HERO SECTION ========== */
+/*  HERO SECTION  */
 .hero-section {
     position: relative;
     padding: 100px 20px 80px;
@@ -379,7 +379,7 @@
     }
 }
 
-/* ========== FEATURES SECTION ========== */
+/*  FEATURES SECTION  */
 .features-section {
     padding: 80px 20px;
     position: relative;
@@ -514,7 +514,7 @@
     line-height: 1.7;
 }
 
-/* ========== HOW IT WORKS SECTION ========== */
+/*  HOW IT WORKS SECTION  */
 .how-section {
     padding: 80px 20px;
     position: relative;
@@ -623,7 +623,7 @@
     margin: 0 auto;
 }
 
-/* ========== STATS SECTION ========== */
+/*  STATS SECTION  */
 .stats-section {
     padding: 60px 20px;
     position: relative;
@@ -687,7 +687,7 @@
     font-weight: 500;
 }
 
-/* ========== TESTIMONIALS SECTION ========== */
+/*  TESTIMONIALS SECTION  */
 .testimonials-section {
     padding: 80px 20px;
     position: relative;
@@ -786,7 +786,7 @@
     margin-top: 2px;
 }
 
-/* ========== CTA SECTION ========== */
+/*  CTA SECTION  */
 .cta-section {
     padding: 80px 20px;
     position: relative;
@@ -904,7 +904,7 @@
     color: #e7ab37;
 }
 
-/* ========== RESPONSIVE ========== */
+/*  RESPONSIVE  */
 @media (max-width: 900px) {
     .hero-title {
         font-size: 40px;

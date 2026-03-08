@@ -1,4 +1,4 @@
-/* ========== Profile Page ========== */
+/*  Profile Page  */
 .profile-page {
     min-height: calc(100vh - 70px);
     background: linear-gradient(135deg, #101742 0%, #1a2260 50%, #0d1235 100%);
@@ -25,7 +25,7 @@
     font-size: 20px;
 }
 
-/* ========== Header Card ========== */
+/*  Header Card  */
 .profile-header-card {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(20px);
@@ -145,7 +145,7 @@
     transform: translateY(-1px);
 }
 
-/* ========== Message ========== */
+/*  Message  */
 .profile-message {
     padding: 14px 20px;
     border-radius: 10px;
@@ -167,7 +167,7 @@
     color: #ff6b6b;
 }
 
-/* ========== Details Card ========== */
+/*  Details Card  */
 .profile-details-card {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(20px);
@@ -185,7 +185,7 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-/* ========== Fields ========== */
+/*  Fields  */
 .profile-fields {
     display: flex;
     flex-direction: column;
@@ -248,7 +248,7 @@
     box-shadow: 0 0 0 3px rgba(231, 171, 55, 0.15);
 }
 
-/* ========== Actions ========== */
+/*  Actions  */
 .profile-actions {
     display: flex;
     gap: 12px;
@@ -303,7 +303,7 @@
     border-color: rgba(255, 255, 255, 0.25);
 }
 
-/* ========== Trading Badge ========== */
+/*  Trading Badge  */
 .trading-badge {
     display: inline-block;
     background: rgba(231, 171, 55, 0.12);
@@ -316,7 +316,7 @@
     margin-top: 6px;
 }
 
-/* ========== Textarea ========== */
+/*  Textarea  */
 .field-content textarea {
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.12);
@@ -336,7 +336,7 @@
     box-shadow: 0 0 0 3px rgba(231, 171, 55, 0.15);
 }
 
-/* ========== Select ========== */
+/*  Select  */
 .field-content select {
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.12);
@@ -364,13 +364,13 @@
     color: #ffffff;
 }
 
-/* ========== Empty Field ========== */
+/*  Empty Field  */
 .empty-field {
     color: rgba(255, 255, 255, 0.3) !important;
     font-style: italic;
 }
 
-/* ========== Password Section ========== */
+/*  Password Section  */
 .password-header {
     display: flex;
     align-items: center;
@@ -407,7 +407,7 @@
     margin-top: 12px;
 }
 
-/* ========== Responsive ========== */
+/*  Responsive  */
 @media (max-width: 600px) {
     .profile-page {
         padding: 30px 10px;

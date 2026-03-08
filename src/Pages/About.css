@@ -1,11 +1,11 @@
-/* ========== About Page ========== */
+/*  About Page  */
 .about-page {
     min-height: calc(100vh - 70px);
     background: linear-gradient(135deg, #101742 0%, #1a2260 50%, #0d1235 100%);
     overflow: hidden;
 }
 
-/* ========== HERO SECTION ========== */
+/*  HERO SECTION  */
 .about-hero {
     position: relative;
     padding: 90px 20px 70px;
@@ -115,7 +115,7 @@
     }
 }
 
-/* ========== MISSION SECTION ========== */
+/*  MISSION SECTION  */
 .about-mission {
     padding: 80px 20px;
     position: relative;
@@ -269,7 +269,7 @@
     font-weight: 500;
 }
 
-/* ========== VALUES SECTION ========== */
+/*  VALUES SECTION  */
 .about-values {
     padding: 80px 20px;
     position: relative;
@@ -419,7 +419,7 @@
     line-height: 1.7;
 }
 
-/* ========== TEAM SECTION ========== */
+/*  TEAM SECTION  */
 .about-team {
     padding: 80px 20px;
     position: relative;
@@ -555,7 +555,7 @@
     color: #e7ab37;
 }
 
-/* ========== STORY / TIMELINE SECTION ========== */
+/*  STORY / TIMELINE SECTION  */
 .about-story {
     padding: 80px 20px;
     position: relative;
@@ -674,7 +674,7 @@
     width: calc(50% - 40px);
 }
 
-/* ========== CTA SECTION ========== */
+/*  CTA SECTION  */
 .about-cta {
     padding: 80px 20px;
     position: relative;
@@ -756,7 +756,7 @@
     box-shadow: 0 8px 30px rgba(231, 171, 55, 0.4);
 }
 
-/* ========== RESPONSIVE ========== */
+/*  RESPONSIVE  */
 @media (max-width: 900px) {
     .about-hero-title {
         font-size: 38px;

@@ -16,7 +16,7 @@ const Home = () => {
     return (
         <div className="home-page">
 
-            {/* ===== HERO SECTION ===== */}
+            {/*  HERO SECTION  */}
             <section className="hero-section" id="hero">
                 {/* Animated Background Orbs */}
                 <div className="hero-bg-orb orb-1"></div>
@@ -57,8 +57,8 @@ const Home = () => {
                         <p className="card-analysis">Bullish breakout above resistance at 1.0850. Targeting 1.0920 with strong momentum.</p>
                         <div className="card-footer">
                             <div className="card-author">
-                                <div className="card-avatar av-1">A</div>
-                                <span>Alex M.</span>
+                                <div className="card-avatar av-1">C</div>
+                                <span>Cabdi M.</span>
                             </div>
                             <div className="card-engagement">
                                 <span><HiChatAlt2 /> 24</span>
@@ -76,7 +76,7 @@ const Home = () => {
                         <div className="card-footer">
                             <div className="card-author">
                                 <div className="card-avatar av-2">S</div>
-                                <span>Sarah C.</span>
+                                <span>Sahra C.</span>
                             </div>
                             <div className="card-engagement">
                                 <span><HiChatAlt2 /> 42</span>
@@ -94,7 +94,7 @@ const Home = () => {
                         <div className="card-footer">
                             <div className="card-author">
                                 <div className="card-avatar av-3">M</div>
-                                <span>Marcus W.</span>
+                                <span>Mahad W.</span>
                             </div>
                             <div className="card-engagement">
                                 <span><HiChatAlt2 /> 18</span>
@@ -105,7 +105,7 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* ===== FEATURES SECTION ===== */}
+            {/*  FEATURES SECTION  */}
             <section className="features-section" id="features">
                 <div className="section-header">
                     <div className="section-label">✦ Why ChartHub</div>
@@ -151,7 +151,7 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* ===== HOW IT WORKS SECTION ===== */}
+            {/*  HOW IT WORKS SECTION  */}
             <section className="how-section" id="how-it-works">
                 <div className="section-header">
                     <div className="section-label">✦ How It Works</div>
@@ -191,7 +191,7 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* ===== STATS SECTION ===== */}
+            {/*  STATS SECTION  */}
             <section className="stats-section" id="stats">
                 <div className="stats-container">
                     <div className="stat-item">
@@ -213,7 +213,7 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* ===== TESTIMONIALS SECTION ===== */}
+            {/*  TESTIMONIALS SECTION  */}
             <section className="testimonials-section" id="testimonials">
                 <div className="section-header">
                     <div className="section-label">✦ Testimonials</div>
@@ -233,9 +233,9 @@ const Home = () => {
                             analysis from other traders has been incredibly valuable."
                         </p>
                         <div className="testimonial-author">
-                            <div className="testimonial-avatar avatar-1">A</div>
+                            <div className="testimonial-avatar avatar-1">C</div>
                             <div>
-                                <div className="testimonial-name">Alex Morgan</div>
+                                <div className="testimonial-name">Cabdi Maxamed</div>
                                 <div className="testimonial-role">Forex Trader</div>
                             </div>
                         </div>
@@ -252,7 +252,7 @@ const Home = () => {
                         <div className="testimonial-author">
                             <div className="testimonial-avatar avatar-2">S</div>
                             <div>
-                                <div className="testimonial-name">Sarah Chen</div>
+                                <div className="testimonial-name">Sahra Cali</div>
                                 <div className="testimonial-role">Crypto Analyst</div>
                             </div>
                         </div>
@@ -269,7 +269,7 @@ const Home = () => {
                         <div className="testimonial-author">
                             <div className="testimonial-avatar avatar-3">M</div>
                             <div>
-                                <div className="testimonial-name">Marcus Webb</div>
+                                <div className="testimonial-name">Mahad Warsame</div>
                                 <div className="testimonial-role">Day Trader</div>
                             </div>
                         </div>
@@ -277,7 +277,7 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* ===== CTA SECTION ===== */}
+            {/*  CTA SECTION  */}
             <section className="cta-section" id="cta">
                 <div className="cta-container">
                     <div className="cta-glow"></div>

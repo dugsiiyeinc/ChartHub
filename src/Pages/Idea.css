@@ -1,11 +1,11 @@
-/* ========== Idea Page ========== */
+/*  Idea Page  */
 .idea-page {
     min-height: calc(100vh - 70px);
     background: linear-gradient(135deg, #101742 0%, #1a2260 50%, #0d1235 100%);
     overflow: hidden;
 }
 
-/* ========== HERO ========== */
+/*  HERO  */
 .idea-hero {
     position: relative;
     padding: 90px 20px 50px;
@@ -98,7 +98,7 @@
     margin: 0 auto;
 }
 
-/* ========== FILTERS / TOOLBAR ========== */
+/*  FILTERS / TOOLBAR  */
 .idea-toolbar {
     padding: 20px 20px 0;
 }
@@ -197,7 +197,7 @@
     font-weight: 700;
 }
 
-/* ========== NEW IDEA BUTTON ========== */
+/*  NEW IDEA BUTTON  */
 .btn-new-idea-page {
     display: inline-flex;
     align-items: center;
@@ -231,7 +231,7 @@
     font-size: 18px;
 }
 
-/* ========== IDEAS GRID ========== */
+/*  IDEAS GRID  */
 .idea-grid-section {
     padding: 30px 20px 80px;
 }
@@ -382,7 +382,7 @@
     font-size: 11px;
 }
 
-/* ========== EMPTY STATE ========== */
+/*  EMPTY STATE  */
 .idea-empty {
     max-width: 1200px;
     margin: 0 auto;
@@ -408,7 +408,7 @@
     font-size: 14px;
 }
 
-/* ========== LOADING STATE ========== */
+/*  LOADING STATE  */
 .idea-loading {
     max-width: 1200px;
     margin: 0 auto;
@@ -464,7 +464,7 @@
     }
 }
 
-/* ========== IDEA DETAIL MODAL ========== */
+/*  IDEA DETAIL MODAL  */
 .idea-detail-overlay {
     position: fixed;
     inset: 0;
@@ -736,7 +736,7 @@
     font-size: 12px;
 }
 
-/* ========== RESPONSIVE ========== */
+/*  RESPONSIVE  */
 @media (max-width: 900px) {
     .idea-hero-title {
         font-size: 38px;

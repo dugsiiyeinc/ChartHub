@@ -1,4 +1,4 @@
-/* ========== Idea Detail Page ========== */
+/*  Idea Detail Page  */
 .idea-detail-page {
     min-height: calc(100vh - 70px);
     background: linear-gradient(135deg, #101742 0%, #1a2260 50%, #0d1235 100%);
@@ -10,7 +10,7 @@
     margin: 0 auto;
 }
 
-/* ========== Back Button ========== */
+/*  Back Button  */
 .idea-detail-back {
     display: inline-flex;
     align-items: center;
@@ -32,7 +32,7 @@
     font-size: 18px;
 }
 
-/* ========== Main Card ========== */
+/*  Main Card  */
 .idea-detail-card {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.06);
@@ -40,7 +40,7 @@
     overflow: hidden;
 }
 
-/* ========== Image Gallery ========== */
+/*  Image Gallery  */
 .idp-gallery {
     width: 100%;
     position: relative;
@@ -177,7 +177,7 @@
     opacity: 0.8;
 }
 
-/* ========== Content ========== */
+/*  Content  */
 .idp-content {
     padding: 32px;
     display: flex;
@@ -223,7 +223,7 @@
     white-space: pre-wrap;
 }
 
-/* ========== Author Section ========== */
+/*  Author Section  */
 .idp-author-section {
     display: flex;
     align-items: center;
@@ -264,7 +264,7 @@
     font-size: 12px;
 }
 
-/* ========== Not Found ========== */
+/*  Not Found  */
 .idea-not-found {
     text-align: center;
     padding: 100px 20px;
@@ -308,7 +308,7 @@
     box-shadow: 0 6px 20px rgba(231, 171, 55, 0.35);
 }
 
-/* ========== Loading Skeleton ========== */
+/*  Loading Skeleton  */
 .idea-detail-skeleton {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.04);
@@ -362,7 +362,7 @@
     }
 }
 
-/* ========== FAALLO (Comments) Section ========== */
+/*  FAALLO (Comments) Section  */
 .faallo-section {
     margin-top: 32px;
     padding-bottom: 40px;
@@ -386,7 +386,7 @@
     font-weight: 700;
 }
 
-/* ========== Faallo Form ========== */
+/*  Faallo Form  */
 .faallo-form {
     display: flex;
     gap: 14px;
@@ -501,7 +501,7 @@
     text-decoration: underline;
 }
 
-/* ========== Faallo List ========== */
+/*  Faallo List  */
 .faallo-list {
     display: flex;
     flex-direction: column;
@@ -575,7 +575,7 @@
     word-break: break-word;
 }
 
-/* ========== Faallo Actions (Edit / Delete) ========== */
+/*  Faallo Actions (Edit / Delete)  */
 .faallo-actions {
     display: flex;
     flex-direction: column;
@@ -627,7 +627,7 @@
     color: #ef4444;
 }
 
-/* ========== Faallo Edit Mode ========== */
+/*  Faallo Edit Mode  */
 .faallo-edit-mode {
     display: flex;
     flex-direction: column;
@@ -704,7 +704,7 @@
     font-size: 14px;
 }
 
-/* ========== Faallo Empty State ========== */
+/*  Faallo Empty State  */
 .faallo-empty {
     background: rgba(255, 255, 255, 0.02);
     border: 1px dashed rgba(255, 255, 255, 0.06);
@@ -733,7 +733,7 @@
     font-size: 13px;
 }
 
-/* ========== Faallo Loading Skeleton ========== */
+/*  Faallo Loading Skeleton  */
 .faallo-loading {
     display: flex;
     flex-direction: column;
@@ -779,7 +779,7 @@
     width: 60%;
 }
 
-/* ========== Responsive ========== */
+/*  Responsive  */
 @media (max-width: 650px) {
     .idea-detail-page {
         padding: 24px 10px 60px;

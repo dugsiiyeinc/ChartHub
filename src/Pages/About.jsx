@@ -19,7 +19,7 @@ const About = () => {
     return (
         <div className="about-page">
 
-            {/* ===== HERO SECTION ===== */}
+            {/*  HERO SECTION  */}
             <section className="about-hero" id="about-hero">
                 <div className="about-hero-orb orb-a"></div>
                 <div className="about-hero-orb orb-b"></div>
@@ -38,7 +38,7 @@ const About = () => {
                 </div>
             </section>
 
-            {/* ===== MISSION SECTION ===== */}
+            {/*  MISSION SECTION  */}
             <section className="about-mission" id="about-mission">
                 <div className="mission-container">
                     <div className="mission-text">
@@ -90,7 +90,7 @@ const About = () => {
                 </div>
             </section>
 
-            {/* ===== VALUES SECTION ===== */}
+            {/*  VALUES SECTION  */}
             <section className="about-values" id="about-values">
                 <div className="about-section-header">
                     <div className="about-section-label">✦ Our Values</div>
@@ -152,7 +152,7 @@ const About = () => {
                 </div>
             </section>
 
-            {/* ===== TEAM SECTION ===== */}
+            {/*  TEAM SECTION  */}
             <section className="about-team" id="about-team">
                 <div className="about-section-header">
                     <div className="about-section-label">✦ Meet The Team</div>
@@ -221,7 +221,7 @@ const About = () => {
                 </div>
             </section>
 
-            {/* ===== STORY / TIMELINE SECTION ===== */}
+            {/*  STORY / TIMELINE SECTION  */}
             <section className="about-story" id="about-story">
                 <div className="about-section-header">
                     <div className="about-section-label">✦ Our Journey</div>
@@ -273,7 +273,7 @@ const About = () => {
                 </div>
             </section>
 
-            {/* ===== CTA SECTION ===== */}
+            {/*  CTA SECTION  */}
             <section className="about-cta" id="about-cta">
                 <div className="about-cta-container">
                     <div className="about-cta-glow"></div>

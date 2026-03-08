@@ -1,4 +1,4 @@
-/* ========== Modal Overlay ========== */
+/*  Modal Overlay  */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -25,7 +25,7 @@
     }
 }
 
-/* ========== Modal Card ========== */
+/*  Modal Card  */
 .modal-card {
     background: #111940;
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -64,7 +64,7 @@
     border-radius: 10px;
 }
 
-/* ========== Header ========== */
+/*  Header  */
 .modal-header {
     display: flex;
     align-items: center;
@@ -93,14 +93,14 @@
     color: #ffffff;
 }
 
-/* ========== Form ========== */
+/*  Form  */
 .modal-form {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-/* ========== Field ========== */
+/*  Field  */
 .modal-field {
     display: flex;
     flex-direction: column;
@@ -163,7 +163,7 @@
     min-height: 100px;
 }
 
-/* ========== Image Upload ========== */
+/*  Image Upload  */
 .image-upload-area {
     display: flex;
     align-items: center;
@@ -188,7 +188,7 @@
     font-size: 20px;
 }
 
-/* ========== Image Previews ========== */
+/*  Image Previews  */
 .image-previews {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -243,7 +243,7 @@
     text-transform: uppercase;
 }
 
-/* ========== Publish Button ========== */
+/*  Publish Button  */
 .btn-publish {
     display: flex;
     align-items: center;
@@ -272,7 +272,7 @@
     transform: none;
 }
 
-/* ========== Responsive ========== */
+/*  Responsive  */
 @media (max-width: 500px) {
     .modal-card {
         padding: 20px;

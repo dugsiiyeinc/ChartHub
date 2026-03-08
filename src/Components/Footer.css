@@ -1,4 +1,4 @@
-/* ========== Footer ========== */
+/*  Footer  */
 .footer {
     background: #0a0f2e;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -10,7 +10,7 @@
     margin: 0 auto;
 }
 
-/* ========== Top Section ========== */
+/*  Top Section  */
 .footer-top {
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr 1fr;
@@ -18,7 +18,7 @@
     padding-bottom: 40px;
 }
 
-/* ========== Brand ========== */
+/*  Brand  */
 .footer-brand {
     display: flex;
     flex-direction: column;
@@ -65,7 +65,7 @@
     transform: translateY(-2px);
 }
 
-/* ========== Links Group ========== */
+/*  Links Group  */
 .footer-links-group {
     display: flex;
     flex-direction: column;
@@ -94,7 +94,7 @@
     transform: translateX(4px);
 }
 
-/* ========== Bottom Section ========== */
+/*  Bottom Section  */
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.06);
     padding: 20px 0;
@@ -106,7 +106,7 @@
     font-size: 12px;
 }
 
-/* ========== Responsive ========== */
+/*  Responsive  */
 @media (max-width: 768px) {
     .footer-top {
         grid-template-columns: 1fr 1fr;

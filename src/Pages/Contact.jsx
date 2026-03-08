@@ -34,7 +34,7 @@ const Contact = () => {
     return (
         <div className="contact-page">
 
-            {/* ===== HERO SECTION ===== */}
+            {/*  HERO SECTION  */}
             <section className="contact-hero" id="contact-hero">
                 <div className="contact-hero-orb orb-a"></div>
                 <div className="contact-hero-orb orb-b"></div>
@@ -53,7 +53,7 @@ const Contact = () => {
                 </div>
             </section>
 
-            {/* ===== CONTACT INFO CARDS ===== */}
+            {/*  CONTACT INFO CARDS  */}
             <section className="contact-info-section" id="contact-info">
                 <div className="contact-info-grid">
                     <div className="contact-info-card" id="info-location">
@@ -88,7 +88,7 @@ const Contact = () => {
                 </div>
             </section>
 
-            {/* ===== CONTACT FORM SECTION ===== */}
+            {/*  CONTACT FORM SECTION  */}
             <section className="contact-form-section" id="contact-form-section">
                 <div className="contact-form-container">
 
@@ -180,7 +180,7 @@ const Contact = () => {
                 </div>
             </section>
 
-            {/* ===== FAQ SECTION ===== */}
+            {/*  FAQ SECTION  */}
             <section className="contact-faq" id="contact-faq">
                 <div className="contact-section-header">
                     <div className="contact-section-label">✦ FAQ</div>

@@ -1,4 +1,4 @@
-/* ========== Dashboard Page ========== */
+/* Dashboard Page  */
 .dashboard-page {
     min-height: calc(100vh - 70px);
     background: linear-gradient(135deg, #101742 0%, #1a2260 50%, #0d1235 100%);
@@ -14,7 +14,7 @@
 }
 
 
-/* ========== Welcome Section ========== */
+/*  Welcome Section  */
 .dashboard-welcome {
     display: flex;
     align-items: flex-start;
@@ -59,7 +59,7 @@
     box-shadow: 0 6px 20px rgba(231, 171, 55, 0.35);
 }
 
-/* ========== Stats Cards ========== */
+/* Stats Cards */
 .dashboard-stats {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -114,7 +114,7 @@
     color: #3b82f6;
 }
 
-/* ========== Section ========== */
+/* Section */
 .dashboard-section {
     display: flex;
     flex-direction: column;
@@ -127,7 +127,7 @@
     font-weight: 700;
 }
 
-/* ========== Empty State ========== */
+/* Empty State */
 .ideas-empty {
     background: rgba(255, 255, 255, 0.03);
     border: 1px dashed rgba(255, 255, 255, 0.1);
@@ -156,7 +156,7 @@
     font-size: 13px;
 }
 
-/* ========== My Ideas List ========== */
+/* My Ideas List */
 .my-ideas-list {
     display: flex;
     flex-direction: column;
@@ -329,7 +329,7 @@
     transform: translateY(-1px);
 }
 
-/* ========== Loading Skeleton ========== */
+/*  Loading Skeleton  */
 .ideas-loading {
     display: flex;
     flex-direction: column;
@@ -385,7 +385,7 @@
     }
 }
 
-/* ========== Responsive ========== */
+/* Responsive */
 @media (max-width: 600px) {
     .dashboard-page {
         padding: 30px 10px;

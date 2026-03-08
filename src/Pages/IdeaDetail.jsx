@@ -345,7 +345,7 @@ const IdeaDetail = () => {
 
                 </article>
 
-                {/* ===== FAALLO SECTION ===== */}
+                {/*  FAALLO SECTION  */}
                 <section className="faallo-section" id="faallo-section">
 
                     {/* Faallo Header */}

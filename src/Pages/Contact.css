@@ -1,11 +1,11 @@
-/* ========== Contact Page ========== */
+/*  Contact Page  */
 .contact-page {
     min-height: calc(100vh - 70px);
     background: linear-gradient(135deg, #101742 0%, #1a2260 50%, #0d1235 100%);
     overflow: hidden;
 }
 
-/* ========== HERO ========== */
+/*  HERO  */
 .contact-hero {
     position: relative;
     padding: 90px 20px 70px;
@@ -115,7 +115,7 @@
     }
 }
 
-/* ========== INFO CARDS ========== */
+/*  INFO CARDS  */
 .contact-info-section {
     padding: 0 20px 60px;
     position: relative;
@@ -217,7 +217,7 @@
     color: #e7ab37;
 }
 
-/* ========== CONTACT FORM SECTION ========== */
+/*  CONTACT FORM SECTION  */
 .contact-form-section {
     padding: 80px 20px;
     position: relative;
@@ -396,7 +396,7 @@
     font-size: 18px;
 }
 
-/* ========== FAQ SECTION ========== */
+/*  FAQ SECTION  */
 .contact-faq {
     padding: 80px 20px;
     position: relative;
@@ -495,7 +495,7 @@
     padding-left: 32px;
 }
 
-/* ========== RESPONSIVE ========== */
+/*  RESPONSIVE  */
 @media (max-width: 900px) {
     .contact-hero-title {
         font-size: 38px;
