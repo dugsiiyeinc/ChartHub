@@ -118,5 +118,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## Images
 
-![alt text](Images/Home1.png)
+![Home1](Images/Home1.png)
 
+
+![Dashboard](Images/Dashboard.png)
