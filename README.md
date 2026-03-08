@@ -103,7 +103,6 @@ ChartHub/
 | **Supabase** | Backend — Database, Authentication, and Storage |
 | **React Icons** | Icon library (Heroicons set) |
 | **Vanilla CSS** | Custom styling with glassmorphism and animations |
-| **ESLint** | Code linting and quality |
 
 
 
@@ -112,7 +111,7 @@ Live Demo: https://chart-hub.vercel.app/
 
 ## 📜 License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is open source and available 
 
 
 
@@ -122,3 +121,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 
 ![Dashboard](Images/Dashboard.png)
+
+![Comment](Images/Comment.png)
+
+
